@@ -8,6 +8,7 @@ import Header from "./components/Header/Header";
 import Quiz from "./components/Quiz/Quiz";
 import Register from "./components/Register/Register";
 import Nav from "./components/Nav/Nav";
+import Home from "./components/Home/Home";
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -19,7 +20,8 @@ function App() {
       <div className="App">
         <Routes>
           <Route path="/register" element={<Register />} />
-          {/* <Route path="/" component={Home} /> */}
+          <Route path="/login" element={<Login />} />
+          <Route path="/" element={<Home />} />
         </Routes>
       </div>
     </div>

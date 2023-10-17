@@ -1,13 +1,13 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 export default function Nav() {
   return (
     <div>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
+          <Link className="navbar-brand" to="/">
             DiagnoApp
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -25,14 +25,14 @@ export default function Nav() {
           >
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <Link className="nav-link" to="/login">
                   Login
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <Link className="nav-link" to="/register">
                   Register
-                </a>
+                </Link>
               </li>
               {/* <li className="nav-item">
                 <a className="nav-link disabled" aria-disabled="true">
