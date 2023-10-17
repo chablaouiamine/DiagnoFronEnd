@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Route, Routes } from "react-router-dom";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
@@ -6,6 +7,7 @@ import Login from "./components/Login/Login";
 import Header from "./components/Header/Header";
 import Quiz from "./components/Quiz/Quiz";
 import Register from "./components/Register/Register";
+import Nav from "./components/Nav/Nav";
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -13,9 +15,13 @@ function App() {
 
   return (
     <div>
-      {/* <Header /> */}
-      {/* <Login /> */}
-      <Register />
+      <Nav />
+      <div className="App">
+        <Routes>
+          <Route path="/register" element={<Register />} />
+          {/* <Route path="/" component={Home} /> */}
+        </Routes>
+      </div>
     </div>
   );
 }

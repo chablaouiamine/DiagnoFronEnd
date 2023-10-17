@@ -36,11 +36,12 @@ export default function Register() {
     <div>
       <form
         action=""
-        className="d-flex flex-column"
+        className="d-flex flex-column align-items-center"
         onSubmit={handleFormSubmit}
       >
+        <h2>Register Now</h2>
         <div className="col-4 mb-3">
-          <label htmlFor="exampleInputEmail1" className="form-label">
+          <label htmlFor="exampleInputUsername" className="form-label">
             Username
           </label>
           <input
