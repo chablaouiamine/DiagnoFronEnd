@@ -1,15 +1,29 @@
-import React, { createContext, useState, useContext } from "react";
+import { useState, useEffect } from "react";
 
-const MyContext = createContext();
+export default function Diagnostic() {
+  const [categories, setCategories] = useState([]);
 
-const Diagnostic = ({ children }) => {
-  const [data, setData] = useState("Initial data");
+  useEffect(() => {
+    async function fetchCategories() {
+      const response = await fetch("http://localhost:8092/diagno");
+      const data = await response.json();
+      setCategories(data);
+    }
+    fetchCategories();
+  }, []);
 
   return (
-    <MyContext.Provider value={{ data, setData }}>
-      {children}
-    </MyContext.Provider>
+    <div>
+      {di.map((category) => (
+        <div key={category.id}>
+          <h2>{category.categorie}</h2>
+          <ul>
+            {category.categorie.map((question) => (
+              <li key={question.id}>{question.text}</li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
   );
-};
-
-export { MyContextProvider, useMyContext };
+}
