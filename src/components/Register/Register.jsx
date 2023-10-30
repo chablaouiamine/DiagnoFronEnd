@@ -55,7 +55,7 @@ export default function Register() {
           />
         </div>
         <div className="col-4 mb-3">
-          <label htmlFor="exampleInputEmail1" className="form-label">
+          <label htmlFor="exampleInputEmail" className="form-label">
             Email address
           </label>
           <input
