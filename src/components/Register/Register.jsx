@@ -38,6 +38,7 @@ export default function Register() {
   };
 
   return (
+
     <div className="login-container">
   <div className="img-container">
     <img src="public/img/LOGIN.png" className="login-img" alt="Votre image" />
