@@ -99,40 +99,7 @@ function App() {
           // Utilisation de `scores[category] || 0` pour gérer le cas où le score n'est pas encore récupéré (par défaut à 0)
         ))}
       </div> */}
-      <div>
-        <h1>Categories</h1>
-        <ul>
-          {categories.map((category) => (
-            <li key={category.id}>
-              {category.name}
-              <button onClick={() => fetchQuestionsAndChoices(category.id)}>
-                Load Questions
-              </button>
-              <ul>
-                {questions[category.id] &&
-                  questions[category.id].map((question) => (
-                    <li key={question.id}>
-                      {question.text}
-                      <ul>
-                        {choices[question.id] &&
-                          choices[question.id].map((choice) => (
-                            <li key={choice.id}>
-                              <input
-                                type="radio"
-                                name={`question_${question.id}`}
-                                value={choice.id}
-                              />
-                              {choice.text}
-                            </li>
-                          ))}
-                      </ul>
-                    </li>
-                  ))}
-              </ul>
-            </li>
-          ))}
-        </ul>
-      </div>
+     
     </div>
   );
 }

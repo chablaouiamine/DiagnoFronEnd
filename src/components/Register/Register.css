@@ -1,0 +1,39 @@
+/* register.css */
+
+.login-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100vh;
+    border: 2px solid black;
+    padding: 20px;
+  }
+  
+  .img-container {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .login-form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+  
+  .img-container img {
+    width: 80%; /* Ajustez la taille de l'image selon vos besoins */
+    margin-right: 20px;
+  }
+  
+  .login-message {
+    margin-top: 20px;
+    text-align: center;
+    display:flex;
+  }
+  
